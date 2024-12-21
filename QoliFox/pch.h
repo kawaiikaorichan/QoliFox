@@ -10,5 +10,12 @@
 // agregue aquí los encabezados que desea precompilar
 #include "framework.h"
 #include "SADXModLoader.h"
+#include "SADXVariables.h"
+#include "SADXVariablesNew.h"
+#include "Trampoline.h"
+#include "ModelInfo.h"
+#include "IniFile.hpp"
+#include "LandTableInfo.h"
+#include "ArchiveX.h"
 
 #endif //PCH_H

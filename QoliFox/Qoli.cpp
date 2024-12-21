@@ -4,6 +4,8 @@
 #define ReplacePVM(a, b) helperFunctions.ReplaceFile("system\\" a ".PVM", "system\\" b ".PVM");
 #define ReplaceTex(pvm, pvr, folder, pngname, gbix, x, y) helperFunctions.ReplaceTexture(pvm, pvr, (std::string(path) + "\\textures\\" folder "\\" pngname ".png").c_str(), gbix, x, y);
 
+void TornadoQoli_init(const HelperFunctions& helperFunctions);
+
 HelperFunctions HelperFunctionsGlobal;
 
 wchar_t* ConvertCharToWChar(const char* value)
@@ -92,6 +94,7 @@ extern "C"
 		WriteJump((void*)0x49BE2D, (void*)0x49BE68);
 		WriteCall((void*)0x4A1705, SetLSDColor);
 		WriteJump((void*)0x4A1630, Sonic_DisplayLightDashModel_mod);
+		TornadoQoli_init(helperFunctions);
 		ReplacePVM("sonic", "Qoli");
 		ReplacePVM("supersonic", "superqoli");
 		ReplacePVM("son_eff", "qoli_eff");
